@@ -1,0 +1,12 @@
+h1 {
+  font-size: 4rem;
+  background-color: blue;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  margin: 2rem;
+}
+
+div {
+  color: yellow;
+  text-align: center;
+}
