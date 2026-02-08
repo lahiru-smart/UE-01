@@ -11,7 +11,7 @@ h1 {
 }
 
 div {
-  color: yellow;
+  color: black;
   text-align: center;
 }
 
@@ -53,4 +53,58 @@ p {
 
   background-color: red;
   color: white;
+}
+
+.selector {
+  background-color: blue;
+  color: white;
+  padding: 20px;
+}
+
+.tag {
+  color: yellow;
+}
+
+section {
+  background-color: blueviolet;
+  margin-block: 20px;
+  color: #fff;
+  padding: 20px;
+}
+
+section.main p {
+  color: aqua;
+}
+
+a {
+  color: aqua;
+}
+
+a:hover {
+  color: #fff;
+}
+
+a:focus {
+  color: black;
+}
+
+.main:hover {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+ul {
+  /* list-style-type: square; */
+}
+
+ul ::marker {
+  content: "❤️️";
+}
+
+.bg {
+  background-image: url("../../images/bouldering-gym.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: 300px;
 }
