@@ -108,3 +108,7 @@ ul ::marker {
   background-position: top center;
   height: 300px;
 }
+
+span {
+  display: block;
+}

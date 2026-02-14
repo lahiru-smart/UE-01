@@ -9,6 +9,11 @@ body {
   color: #000000;
 }
 
+.wrapper {
+  max-inline-size: 1000px;
+  margin-inline: auto;
+}
+
 img {
   display: block;
   max-width: 100%;
