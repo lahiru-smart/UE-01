@@ -1,0 +1,103 @@
+/*basis styles start*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #eeece3;
+  margin: 10px;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  border: 5px solid #ffcc5c;
+  margin-bottom: 60px;
+}
+
+.box {
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ffeead;
+}
+
+.box:nth-child(1) {
+  background-color: #1f6e49;
+}
+
+.box:nth-child(2) {
+  background-color: #ff6f69;
+}
+
+.box:nth-child(3) {
+  background-color: #88d8b0;
+}
+
+.box:nth-child(4) {
+  background-color: #1d44f3;
+}
+
+.box:nth-child(5) {
+  background-color: #9d21b6;
+}
+
+h1 {
+  font-size: 1.25rem;
+  color: #c25450;
+
+  span {
+    color: #000;
+    font-size: 1rem;
+  }
+}
+
+/* basis styles end */
+
+.container {
+  display: flex;
+}
+
+/* Example 1 */
+.fx-direction {
+  flex-direction: row;
+}
+
+/* Example 2 */
+
+.x-alignment {
+  justify-content: center;
+}
+
+/* Example 3 */
+.push-right {
+  margin-right: auto;
+}
+
+.push-left {
+  margin-left: auto;
+}
+
+/* Example 4 */
+
+.flex-method {
+  .home {
+    /* flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 400px; */
+    flex: 1 1 0;
+  }
+
+  .contact {
+    /* flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 400px; */
+    flex: 1 1 0;
+  }
+}
+
+/* Example 5 */

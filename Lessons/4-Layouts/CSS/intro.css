@@ -1,0 +1,51 @@
+.box {
+  color: white;
+  font-size: 22px;
+  padding: 30px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.box1 {
+  background-color: red;
+}
+
+.box2 {
+  background-color: blue;
+}
+
+.box3 {
+  background-color: blueviolet;
+}
+
+/* Responsive Layouts Start */
+
+.responsive-wrapper {
+  color: #fff;
+  min-height: 50vh;
+  align-content: center;
+  text-align: center;
+}
+
+/* Responsive Layouts End */
+@media screen and (max-width: 991px) {
+  .responsive-wrapper {
+    background-color: #ccc;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .responsive-wrapper {
+    background-color: #9f0dcc;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .responsive-wrapper {
+    background-color: #0dcc2d;
+  }
+}
