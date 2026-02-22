@@ -28,7 +28,7 @@ a {
 
 .content {
   width: 70vw;
-  margin: 3rem auto;
+  margin: 0rem auto 0rem auto;
   padding: 3em;
   box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
   background: white;
@@ -49,4 +49,40 @@ a {
 
 .flow > * + * {
   margin-top: 1rem;
+}
+
+/* Even Columns */
+
+.even-columns {
+  display: flex;
+
+  & > * {
+    flex-basis: 50%;
+  }
+}
+
+/* Gridish Layout */
+.grid-ish {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > * {
+    flex: 1 1 10em;
+  }
+}
+
+/* Content & Sidebar */
+
+.content-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+
+  .article {
+    flex: 1 1 70%;
+    min-width: 25ch;
+  }
+  .sidebar {
+    flex: 1 1 30%;
+    min-width: 15ch;
+  }
 }
