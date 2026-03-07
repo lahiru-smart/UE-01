@@ -44,3 +44,30 @@ body {
 }
 
 /* basis styles end */
+
+.search {
+  flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .container li {
+    flex: 1 1 50%;
+    text-align: center;
+  }
+  .search > input {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container li {
+    flex: 1 1 100%;
+  }
+  .search {
+    order: 1;
+  }
+}
