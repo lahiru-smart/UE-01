@@ -15,7 +15,8 @@ The designs were created to the following widths:
 
 - Navy 950 (main background): hsl(233, 47%, 7%)
 - Blue 950 (card background): hsl(244, 37%, 16%)
-- Purple 500 (accent): hsl(277, 64%, 61%)
+- Purple 500 (accent): rgb(170, 92, 219)
+- Purple 500 (overlay): rgba(170, 92, 219,0.5)
 
 ### Neutral
 
