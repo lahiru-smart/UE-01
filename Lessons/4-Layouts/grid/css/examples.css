@@ -1,0 +1,103 @@
+/* basic styling */
+.header {
+  background-color: #96ceb4;
+}
+
+.menu {
+  background-color: #ff6f69;
+}
+
+.content {
+  background-color: #ffcc5c;
+}
+
+.footer {
+  background-color: #88d8b0;
+}
+
+.title {
+  color: #ff6f69;
+  background-color: #ffeead;
+  text-align: center;
+  padding: 30px 0 10px;
+  margin: 0px;
+}
+
+.wrapper > div {
+  padding-left: 20px;
+  color: #ffeead;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.row > div {
+  padding-left: 20px;
+  color: #ffeead;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.row > .content {
+  height: 100px;
+}
+
+html {
+  padding: 0 10px;
+  margin: 0 10px;
+}
+
+body > .row {
+  margin: 0px;
+}
+
+.row > .menu {
+  height: 100px;
+}
+
+.row > .header {
+  height: 40px;
+}
+
+.row > .footer {
+  height: 40px;
+}
+/* basic styling */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px 100px 40px;
+}
+
+.header {
+  grid-column: span 12;
+}
+
+.menu {
+  grid-column: span 4;
+}
+
+.content {
+  grid-column: span 8;
+}
+
+.footer {
+  grid-column: span 12;
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    grid-column: span 6;
+  }
+
+  .menu {
+    grid-row: 1;
+    grid-column: span 6;
+  }
+
+  .content {
+    grid-column: span 12;
+  }
+}

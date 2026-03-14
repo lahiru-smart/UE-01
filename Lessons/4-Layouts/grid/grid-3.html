@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid - Learn 03</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>3) Positioning Elements</h1>
+    <h3>{grid-column-start/end}</h3>
+    <h3>{grid-row-start/end}</h3>
+    <div class="container grid-3">
+      <div class="header">HEADER</div>
+      <div class="menu">MENU</div>
+      <div class="content">CONTENT</div>
+      <div class="footer">FOOTER</div>
+    </div>
+    <br />
+    <br />
+
+    .header{<br />
+    grid-column-start: 2;<br />
+    grid-column-end: 13;<br />
+    <strong>grid-column: grid-column-start / grid-column-end;</strong><br />
+    <strong>grid-column: 2 / 13;</strong><br />
+    <strong>grid-column: 2 / -1;</strong><br />
+    }
+  </body>
+</html>
