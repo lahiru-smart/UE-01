@@ -9,23 +9,26 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>5) Auto-fit and minmax</h1>
+    <h1>5) Auto-fit and Auto-fill with minmax</h1>
     <h2>Making Responsive Columns</h2>
     <h3>{grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));}</h3>
+    <h3>{grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));}</h3>
 
-    <div class="container grid-5">
+    <hr />
+    <h2>auto-fit</h2>
+    <div class="container grid-5 auto-fit">
       <div>1</div>
       <div>2</div>
       <div>3</div>
       <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
-      <div>8</div>
-      <div>9</div>
-      <div>10</div>
-      <div>11</div>
-      <div>12</div>
+    </div>
+
+    <h2>auto-fill</h2>
+    <div class="container grid-5 auto-fill">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
     </div>
   </body>
 </html>
