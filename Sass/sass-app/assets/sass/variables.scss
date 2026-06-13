@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-size: 1.75rem;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+/*-----------1. Variable Intro with custom properties START--------------*/
+
+$clr-primary: purple;
+
+.title {
+  color: $clr-primary;
+}
+
+a {
+  color: $clr-primary;
+}
+
+$clr-primary: yellow;
+$clr-secondary: blue;
+$clr-accent: black;
+
+$btn-bg: $clr-primary;
+$btn-text: $clr-accent;
+$btn-border: $clr-secondary;
+
+.btn {
+  font-size: 1.6rem;
+  border-radius: 8px;
+  display: block;
+  background-color: $btn-bg;
+  color: $btn-text;
+  border: 5px solid $btn-border;
+  cursor: pointer;
+}
+
+/*-----------1. Variable Intro with custom properties END--------------*/
+
+/*-----------2. Variables defined by variables START--------------*/
+$clr-primary: #ff0000;
+$clr-secondary: #0000ff;
+
+$gradient: linear-gradient(45deg, $clr-primary, $clr-secondary);
+
+.card {
+  background: $gradient;
+}
+
+/*-----------2. Variables defined by variables END--------------*/
+
+/*-----------3. Variables and the cascade START--------------*/
+// Locally Scoped
+.card {
+  $clr-primary: blue;
+
+  &-nav-link {
+    // this would work
+    color: $clr-primary;
+  }
+}
+
+//   Globally Scoped
+$clr-primary: red;
+
+.card {
+  $clr-secondary: pink !global;
+
+  &-nav-link {
+    color: $clr-secondary;
+  }
+}
+
+.card {
+  &__title {
+    color: $clr-secondary;
+  }
+}
+/*-----------3. Variables and the cascade END--------------*/
+
+/*-----------4. Variables as breakpoints START--------------*/
+$bp-medium: 55em;
+$bp-large: 75em;
+
+.main-grid {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "sidebar-one"
+    "sidebar-two"
+    "footer";
+
+  @media (min-width: $bp-medium) {
+    grid-template-areas:
+      "header header"
+      "main sidebar-one"
+      "main sidebar-two"
+      "footer footer";
+  }
+
+  @media (min-width: $bp-large) {
+    grid-template-areas:
+      "header header header"
+      "main sidebar-one sidebar-two"
+      "footer footer footer";
+  }
+}
+
+// CSS Custom Properties
+.container {
+  --clr-bg: #ddd;
+  background-color: var(--clr-bg);
+  padding: 2em;
+}
+/*-----------4. Variables as breakpoints END--------------*/
