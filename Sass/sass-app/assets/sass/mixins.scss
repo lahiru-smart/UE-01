@@ -1,0 +1,108 @@
+/*-----------Basic--------------*/
+@mixin uppercase-bold-text {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.accent-text {
+  color: limegreen;
+  @include uppercase-bold-text;
+}
+/*-----------Basic--------------*/
+
+/*-----------Selectors inside of mixins--------------*/
+/*-----------1--------------*/
+@mixin inverted-colors {
+  color: white;
+  background: black;
+
+  a {
+    color: yellow;
+  }
+  &__title {
+    font-size: 2.5rem;
+    color: #f07178;
+  }
+}
+
+.call-to-action {
+  @include inverted-colors;
+}
+
+/*-----------Mini Challenge--------------*/
+
+@mixin cta {
+  font-size: 2.5rem;
+  color: #f07178;
+}
+
+.call-to-action {
+  &__title {
+    @include cta;
+  }
+}
+
+.call-to-action__title {
+  font-size: 2.5rem;
+  color: #f07178;
+}
+
+/*-----------Mini Challenge--------------*/
+
+/*-----------2--------------*/
+@mixin button($bg) {
+  background: $bg;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.btn--accent {
+  @include button($bg: limegreen);
+}
+
+.btn--inverted {
+  @include button($bg: #000);
+  color: white;
+}
+
+/*-----------3 with variables--------------*/
+$clr-primary: steelblue;
+$clr-secondary: dodgerblue;
+$clr-accent: limegreen;
+
+@mixin button($bg, $color) {
+  background: $bg;
+  color: $color;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.btn-primary {
+  @include button($clr-primary, #fff);
+}
+
+.btn-secondary {
+  @include button($clr-secondary, black);
+}
+
+.btn-accent {
+  @include button($clr-accent, #ddd);
+}
+
+/*-----------4 optional arguments--------------*/
+@mixin linear-gradient($deg: -45deg, $clr-1: red, $clr-2: blue) {
+  background-image: linear-gradient($deg, $clr-1, $clr-2);
+}
+
+.hero {
+  padding: max(10vh, 5rem);
+  @include linear-gradient(90deg);
+}
+
+.call-to-action {
+  @include linear-gradient($clr-2: yellow);
+}
+/*-----------Selectors inside of mixins--------------*/

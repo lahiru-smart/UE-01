@@ -1,0 +1,28 @@
+/*-----------Sass Color Functions--------------*/
+// 1
+.bg-red {
+  background-color: hsl(5, 72%, 53%);
+}
+
+.bg-red {
+  background-color: rgb(#334455, 0.5);
+}
+
+//   2
+$clr-primary: #20f;
+
+.semi-transparent-background {
+  background-color: rgb($clr-primary, 0.5);
+}
+
+// 3
+// all three variables works fine below
+$red: hsl(5, 72%, 53%);
+$blue: #2565cb;
+$green: rgb(24, 140, 26);
+
+.bg-red-50 {
+  background-color: rgb($red, 0.5);
+}
+
+/*-----------Sass Color Functions--------------*/
